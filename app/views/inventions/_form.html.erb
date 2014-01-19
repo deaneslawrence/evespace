@@ -1,0 +1,25 @@
+<%= form_for(@invention) do |f| %>
+  <% if @invention.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@invention.errors.count, "error") %> prohibited this invention from being saved:</h2>
+
+      <ul>
+      <% @invention.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :blueprint %><br>
+    <%= f.number_field :blueprint %>
+  </div>
+  <div class="field">
+    <%= f.label :prefered_decryptor %><br>
+    <%= f.number_field :prefered_decryptor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

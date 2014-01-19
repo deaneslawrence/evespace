@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Blueprint:</strong>
+  <%= @invention.blueprint %>
+</p>
+
+<p>
+  <strong>Prefered decryptor:</strong>
+  <%= @invention.prefered_decryptor %>
+</p>
+
+<%= link_to 'Edit', edit_invention_path(@invention) %> |
+<%= link_to 'Back', inventions_path %>

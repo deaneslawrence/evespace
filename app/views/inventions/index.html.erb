@@ -1,0 +1,29 @@
+<h1>Listing inventions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Blueprint</th>
+      <th>Prefered decryptor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventions.each do |invention| %>
+      <tr>
+        <td><%= invention.blueprint %></td>
+        <td><%= invention.prefered_decryptor %></td>
+        <td><%= link_to 'Show', invention %></td>
+        <td><%= link_to 'Edit', edit_invention_path(invention) %></td>
+        <td><%= link_to 'Destroy', invention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invention', new_invention_path %>
