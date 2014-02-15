@@ -19,6 +19,11 @@ gem 'coffee-rails', '4.0.1'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
+end
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.0.4'
 
